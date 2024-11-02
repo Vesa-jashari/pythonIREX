@@ -40,7 +40,7 @@ import csv
 
 data = [
     {'Name': 'Arion', 'Age': 21, 'City':'Prishtine'},
-    {'Name': 'Fat', 'Age': 17, 'City': 'Prishtine'},
+    {'Name': 'Fat', 'Age': 19, 'City': 'Prishtine'},
     {'Name': 'Vesa', 'Age': 17, 'City': 'Mitrovice'}
 ]
 

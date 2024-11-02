@@ -66,9 +66,9 @@ class BMIApp:
     def __init__(self):
         self.people=[]
     def add_person(self,person):
-        self.person.append(person)
+        self.people.append(person)
     def collect_user_data(self):
-        name=int(input(" Enter name "))
+        name=input(" Enter name ")
         age=int(input(" Enter age "))
         weight=float(input(" Enter Weight in kg "))
         height=float(input(" Enter Height in m "))
@@ -85,7 +85,7 @@ class BMIApp:
             self.collect_user_data()
             cont=input("Do you want to add a person").strip().lower()
 
-            if cont!="Y":
+            if cont !="y":
                 break
         self.print_result()
 
@@ -93,11 +93,7 @@ app=BMIApp()
 app.run()
 
 
-import numpy as np
 
-arr_2d=np.array([1,2.3,54],[8,3,4,5,])
-
-print(arr_2d)
 
 
 

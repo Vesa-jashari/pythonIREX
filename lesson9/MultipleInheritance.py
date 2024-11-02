@@ -1,27 +1,32 @@
 class Vertebrate:
     def __init__(self, backBone=True):
-        self.has_backBone=backBone
+        self.has_backBone = backBone
+
     def vertebrate_info(self):
-        print(f"Vertebrates have a backboon")
+        print("Vertebrates have a backbone")
+
 
 class Aquatic:
     def __init__(self, habitat="Water"):
-        self.habitate=habitat
-    def aquatric_info(self):
-        print(f"Aquatic animals live in water")
+        self.habitat = habitat  # Fixed variable name
 
-class Fish(Vertebrate , Aquatic):
-    def __init__(self, specie ,backbone=True, habitat="Water"):
-        super().__init__(backbone=backbone)
-        self.habitate=habitat
-        self.species=species
+    def aquatic_info(self):
+        print("Aquatic animals live in water")
 
-     def fish_info(self):
-         print(f"The {self.species} is a type of fish found in {self.habitate}")
 
-     def swim(self):
-         print(f"The fish is swimming")
+class Fish(Vertebrate, Aquatic):
+    def __init__(self, species, backbone=True, habitat="Water"):
+        Vertebrate.__init__(self, backBone=backbone)  # Use class name directly
+        Aquatic.__init__(self, habitat=habitat)  # Call the parent class's init
+        self.species = species  # Fixed variable name
 
-goldfish=Fish("Golden Fish")
+    def fish_info(self):
+        print(f"The {self.species} is a type of fish found in {self.habitat}")
+
+    def swim(self):
+        print("The fish is swimming")
+
+
+goldfish = Fish("Goldfish")
 print(goldfish.has_backBone)
 goldfish.swim()

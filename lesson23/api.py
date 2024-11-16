@@ -1,5 +1,8 @@
+from random import sample
+
 from fastapi import FastAPI
-from model import Developer, Project
+
+from model import Developer,Project
 
 app=FastAPI()
 
@@ -16,6 +19,7 @@ def get_projects():
     shembullprojekt=Project(
         title="Sample",
         description="this is.....",
-        languages=["PHP","JS"]
-        lead_developer=Developer(name="Vesa")
+        languages=["PHP","JS"],
+        lead_developer=Developer(name="Vesa",experience=2)
     )
+    return{"projects":sample}

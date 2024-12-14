@@ -1,7 +1,7 @@
 import sqlite3
 from typing import List
 
-from eventlet.green.MySQLdb import cursors
+
 from fastapi import APIRouter, HTTPException, status ,Depends
 from models.book import book, BookCreate
 from database import get_db_connection
